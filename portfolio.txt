@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amanuel Kiros - Senior Full Stack Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Dark mode toggle styles */
+    .dark-mode {
+      background-color: #1a202c;
+      color: #e2e8f0;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 transition-colors duration-300">
+  <button
+    id="darkModeToggle"
+    class="fixed top-5 right-5 bg-gray-200 dark:bg-gray-700 p-2 rounded shadow"
+    aria-label="Toggle dark mode"
+  >
+    🌙
+  </button>
+
+  <main class="max-w-4xl mx-auto p-6 md:p-12 font-sans">
+    <h1 class="text-4xl font-bold mb-2">Amanuel Kiros</h1>
+    <p class="text-lg font-semibold mb-6">Senior Full Stack Engineer</p>
+
+    <!-- Contact Links -->
+    <div class="flex flex-wrap gap-6 mb-10">
+      <a href="https://github.com/amanuel-github" target="_blank" class="underline hover:text-blue-600">
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/akg-gka-4a117b18b" target="_blank" class="underline hover:text-blue-600">
+        LinkedIn
+      </a>
+      <a href="mailto:amanuel.kiros18@gmail.com" class="underline hover:text-blue-600">Email</a>
+      <span>📞 +251 937 202 092</span>
+    </div>
+
+    <!-- About Me -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-3">About Me</h2>
+      <p>
+        Experienced Software Engineer with over 6 years of expertise in developing innovative programs that enhance organizational efficiency. Skilled in writing reliable, maintainable, and scalable code using technologies like Java, C#, Spring Boot, ASP.NET Core, React, and Vue.js. Strong communicator and strategic thinker with a passion for designing clean architectures and mentoring developers.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-3">Technical Skills</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li><strong>Languages:</strong> Java, C#, C++, PHP, JavaScript</li>
+        <li><strong>Frameworks:</strong> Spring Boot, ASP.NET Core, NodeJS, ReactJS, VueJS, Angular, Xamarin, Laravel, Django</li>
+        <li><strong>Databases:</strong> MySQL, SQL Server, PostgreSQL, MongoDB, SQLite</li>
+        <li><strong>Tools:</strong> Docker, Git, AWS, Azure DevOps, GitLab, Jira</li>
+        <li><strong>UI Libraries:</strong> TailwindCSS, Vuetify, Bootstrap, Material UI</li>
+        <li><strong>Agile:</strong> Kanban, Scrum</li>
+        <li><strong>Other:</strong> Microservices, JWT Auth, CI/CD, Design Patterns, Cybersecurity</li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-3">Professional Experience</h2>
+
+      <article class="mb-4">
+        <h3 class="font-bold">Senior Full-Stack Engineer – Medco Technology Solutions</h3>
+        <p class="italic mb-1">Oct 2023 – Jun 2025</p>
+        <ul class="list-disc list-inside">
+          <li>Built a Health Insurance App with Spring Boot & VueJS using Microservice Architecture.</li>
+          <li>Implemented automated testing, best design patterns, and Vuetify UI components.</li>
+          <li>Developed complex queries and applied clean design practices.</li>
+          <li>Deployed with client-side local server setup.</li>
+        </ul>
+      </article>
+
+      <article class="mb-4">
+        <h3 class="font-bold">Senior Full-Stack Engineer – Custor Computing PLC</h3>
+        <p class="italic mb-1">Nov 2022 – Sept 2023</p>
+        <ul class="list-disc list-inside">
+          <li>Built Online Trade Registration & Licensing System with NodeJS and ReactJS.</li>
+          <li>Applied Clean Architecture with CQRS and Repository patterns.</li>
+          <li>Implemented Identity Server with OpenID Connect & OAuth protocols.</li>
+          <li>Worked with Azure DevOps, Localization (Amharic, Afan Oromo, Tigrinya, English).</li>
+          <li>Upgraded Investment Services Info System with Angular & .NET Core.</li>
+        </ul>
+      </article>
+
+      <article class="mb-4">
+        <h3 class="font-bold">Back End Software Engineer – Tahses ICT and Computing PLC</h3>
+        <p class="italic mb-1">Oct 2021 – Sept 2022</p>
+        <ul class="list-disc list-inside">
+          <li>Built Learning Management System using Laravel PHP & VueJS.</li>
+          <li>Implemented security with Identity Server and followed SDLC best practices.</li>
+        </ul>
+      </article>
+
+      <article class="mb-4">
+        <h3 class="font-bold">Full Stack Software Engineer – Ay Technology Solutions</h3>
+        <p class="italic mb-1">Jul 2019 – Sept 2021</p>
+        <ul class="list-disc list-inside">
+          <li>Built Task & Shift Management (ReactJS + NodeJS).</li>
+          <li>Developed Ethiopian News Agency App (Xamarin) and Health Extension Workers COVID-19 Training System (Django).</li>
+          <li>Applied JWT authorization server and used MongoDB & PostgreSQL.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3 class="font-bold">Software Developer Intern – Tigray ICT Agency</h3>
+        <p class="italic mb-1">Sept 2018 – Mar 2019</p>
+        <ul class="list-disc list-inside">
+          <li>Assisted in Smart Card Project with PHP (Laravel).</li>
+          <li>Solved algorithms and worked on collaborative development.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Education -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-3">Education</h2>
+      <p>B.Sc. Computer Science & Engineering – Mekelle University, MIT (2014 – 2019)</p>
+    </section>
+
+    <!-- Projects -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-3">Highlighted Projects</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li><a href="https://github.com/amanuel-github/employee-management-system" target="_blank" class="underline hover:text-blue-600">Employee Management System – ASP.NET Core Web API</a></li>
+        <li><a href="https://github.com/amanuel-github/customer-pricing-react" target="_blank" class="underline hover:text-blue-600">Customer Pricing with React</a></li>
+        <li><a href="https://github.com/amanuel-github" target="_blank" class="underline hover:text-blue-600">All GitHub Repositories</a></li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-3">Contact</h2>
+      <p>Email: amanuel.kiros18@gmail.com</p>
+      <p>Phone: +251 937 202 092</p>
+      <p>GitHub: <a href="https://github.com/amanuel-github" target="_blank" class="underline hover:text-blue-600">https://github.com/amanuel-github</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/akg-gka-4a117b18b" target="_blank" class="underline hover:text-blue-600">https://www.linkedin.com/in/akg-gka-4a117b18b</a></p>
+    </section>
+  </main>
+
+  <script>
+    const btn = document.getElementById("darkModeToggle");
+    btn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      if (document.body.classList.contains("dark-mode")) {
+        btn.textContent = "☀️";
+      } else {
+        btn.textContent = "🌙";
+      }
+    });
+  </script>
+</body>
+</html>
