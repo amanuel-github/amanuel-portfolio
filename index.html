@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amanuel Kiros - Senior Full Stack Engineer</title>
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/YOUR_GITHUB_ID" />
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/YOUR_GITHUB_ID?v=4" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -33,6 +33,16 @@
       transform: scale(1.02);
     }
 
+    section a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    section a:hover {
+      color: #2563eb; /* blue-600 */
+      text-decoration: none;
+    }
+
     /* Section offset for fixed nav */
     section {
       scroll-margin-top: 100px;
@@ -42,6 +52,85 @@
     .dark-mode {
       background-color: #1a202c;
       color: #e2e8f0;
+    }
+
+    /* Navbar styling */
+    nav {
+      background-color: #1e40af; /* deep blue */
+      color: white;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #93c5fd; /* lighter blue */
+      transform: scale(1.05);
+    }
+
+    /* Section Background Colors */
+    #about {
+      background-color: #eff6ff; /* soft blue */
+      color: #1e293b; /* dark slate */
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+
+    #skills {
+      background-color: #d9f99d; /* light lime/teal */
+      color: #365314; /* dark green */
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+
+    #experience {
+      background-color: #ffe4c0; /* soft peach */
+      color: #78350f; /* dark orange */
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+
+    #projects {
+      background-color: #e0d7f5; /* soft lavender */
+      color: #4c1d95; /* dark purple */
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+
+    #contact {
+      background-color: #f3f4f6; /* light gray */
+      color: #111827; /* almost black */
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+
+    /* Dark mode overrides for sections */
+    body.dark-mode #about {
+      background-color: #1e293b;
+      color: #cbd5e1;
+    }
+    body.dark-mode #skills {
+      background-color: #365314;
+      color: #d9f99d;
+    }
+    body.dark-mode #experience {
+      background-color: #78350f;
+      color: #ffe4c0;
+    }
+    body.dark-mode #projects {
+      background-color: #4c1d95;
+      color: #e0d7f5;
+    }
+    body.dark-mode #contact {
+      background-color: #374151;
+      color: #f3f4f6;
+    }
+
+    /* Smooth background and text color transition */
+    body, nav, section {
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
   </style>
 </head>
@@ -57,32 +146,34 @@
   </button>
 
   <!-- Sticky Navbar -->
-  <nav class="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow z-40">
-    <div class="max-w-4xl mx-auto px-6 py-2 flex justify-between items-center">
-      <span class="font-bold">Amanuel Kiros</span>
+  <nav class="fixed top-0 left-0 w-full shadow z-40">
+    <div class="max-w-4xl mx-auto px-6 py-3 flex justify-between items-center">
+      <span class="font-bold text-white">Amanuel Kiros</span>
       <div class="space-x-4 text-sm">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" class="hover:text-blue-300">About</a>
+        <a href="#skills" class="hover:text-blue-300">Skills</a>
+        <a href="#experience" class="hover:text-blue-300">Experience</a>
+        <a href="#projects" class="hover:text-blue-300">Projects</a>
+        <a href="#contact" class="hover:text-blue-300">Contact</a>
       </div>
     </div>
   </nav>
 
-  <main class="max-w-4xl mx-auto pt-24 px-6 md:px-12 font-sans">
-    <h1 class="text-4xl font-bold mb-2">Amanuel Kiros</h1>
-    <p class="text-lg font-semibold mb-6">Senior Full Stack Engineer</p>
+  <main class="max-w-4xl mx-auto pt-24 px-6 md:px-12 font-sans space-y-10">
+    <header>
+      <h1 class="text-4xl font-bold mb-2">Amanuel Kiros</h1>
+      <p class="text-lg font-semibold mb-6">Senior Full Stack Engineer</p>
 
-    <div class="flex flex-wrap gap-6 mb-10">
-      <a href="https://github.com/amanuel-github" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/akg-gka-4a117b18b" target="_blank">LinkedIn</a>
-      <a href="mailto:amanuel.kiros18@gmail.com">Email</a>
-      <span>📞 +251 937 202 092</span>
-    </div>
+      <div class="flex flex-wrap gap-6 mb-10">
+        <a href="https://github.com/amanuel-github" target="_blank" class="text-blue-700 hover:text-blue-900">GitHub</a>
+        <a href="https://www.linkedin.com/in/akg-gka-4a117b18b" target="_blank" class="text-blue-700 hover:text-blue-900">LinkedIn</a>
+        <a href="mailto:amanuel.kiros18@gmail.com" class="text-blue-700 hover:text-blue-900">Email</a>
+        <span>📞 +251 937 202 092</span>
+      </div>
+    </header>
 
     <!-- About -->
-    <section id="about" class="mb-10" data-aos="fade-up">
+    <section id="about" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-3">About Me</h2>
       <p>
         Experienced Software Engineer with over 6 years of expertise in building scalable, reliable applications. Proficient in Java, C#, Spring Boot, ASP.NET Core, React, and Vue.js. Passionate about clean code, robust architecture, and mentoring dev teams.
@@ -90,7 +181,7 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="mb-10" data-aos="fade-up">
+    <section id="skills" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-3">Technical Skills</h2>
       <ul class="list-disc list-inside space-y-1">
         <li><strong>Languages:</strong> Java, C#, C++, PHP, JavaScript</li>
@@ -104,7 +195,7 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="mb-10" data-aos="fade-up">
+    <section id="experience" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-3">Professional Experience</h2>
 
       <article class="mb-4">
@@ -155,11 +246,10 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="mb-10" data-aos="fade-up">
+    <section id="projects" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-3">Highlighted Projects</h2>
       <ul class="list-disc list-inside space-y-1">
         <li><a href="https://github.com/amanuel-github/employee-management-system" target="_blank">Employee Management System – ASP.NET Core Web API</a></li>
-        <li><a href="https://github.com/amanuel-github/customer-pricing-react" target="_blank">Customer Pricing with React</a></li>
         <li><a href="https://github.com/amanuel-github" target="_blank">All GitHub Repositories</a></li>
       </ul>
     </section>
