@@ -2,120 +2,170 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>amanuel kiros</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amanuel Kiros – Senior Full Stack Software Engineer</title>
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/YOUR_GITHUB_ID?v=4" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Fira Code', monospace;
-    }
-    ::selection {
-      background-color: #93c5fd;
-      color: #1e3a8a;
-    }
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb {
-      background-color: #64748b;
-      border-radius: 10px;
+      background-color: #cbd5e0;
+      border-radius: 4px;
     }
+    body.dark-mode ::-webkit-scrollbar-thumb { background-color: #4a5568; }
+
+    a { transition: all 0.2s ease-in-out; }
+    a:hover { color: #2563eb; transform: scale(1.02); }
+
+    section a { color: inherit; text-decoration: underline; }
+    section a:hover { color: #2563eb; text-decoration: none; }
+
+    section { scroll-margin-top: 100px; }
+
+    .dark-mode { background-color: #1a202c; color: #e2e8f0; }
+
+    nav { background-color: #1e40af; color: white; }
+    nav a:hover { color: #93c5fd; transform: scale(1.05); }
+
+    #about { background-color: #eff6ff; color: #1e293b; }
+    #skills { background-color: #d9f99d; color: #365314; }
+    #experience { background-color: #ffe4c0; color: #78350f; }
+    #projects { background-color: #e0d7f5; color: #4c1d95; }
+    #contact { background-color: #f3f4f6; color: #111827; }
+
+    .dark-mode #about { background-color: #1e293b; color: #cbd5e1; }
+    .dark-mode #skills { background-color: #365314; color: #d9f99d; }
+    .dark-mode #experience { background-color: #78350f; color: #ffe4c0; }
+    .dark-mode #projects { background-color: #4c1d95; color: #e0d7f5; }
+    .dark-mode #contact { background-color: #374151; color: #f3f4f6; }
+
+    body, nav, section { transition: background-color 0.3s ease, color 0.3s ease; }
   </style>
 </head>
-<body class="bg-[#0a192f] text-gray-300">
-  <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-[#0a192f] border-b border-gray-800">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl text-[#64ffda] font-bold lowercase">amanuel kiros</h1>
-      <nav class="space-x-6 text-sm uppercase tracking-widest hidden md:block">
-        <a href="#about" class="hover:text-[#64ffda] transition">About</a>
-        <a href="#skills" class="hover:text-[#64ffda] transition">Skills</a>
-        <a href="#experience" class="hover:text-[#64ffda] transition">Experience</a>
-        <a href="#projects" class="hover:text-[#64ffda] transition">Projects</a>
-        <a href="#contact" class="hover:text-[#64ffda] transition">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="max-w-4xl mx-auto pt-32 px-6 space-y-24">
-    <!-- Hero -->
-    <section>
-      <p class="text-[#64ffda] mb-2">Hi, my name is</p>
-      <h1 class="text-4xl sm:text-5xl font-bold text-gray-100">Amanuel Kiros</h1>
-      <h2 class="text-3xl sm:text-4xl font-bold text-gray-400 mt-2">I build things for the web.</h2>
-      <p class="mt-6 max-w-xl">
-        I'm a full stack engineer with 6+ years of experience building enterprise-grade software. I specialize in Java, Spring Boot, React, and scalable architectures.
-      </p>
-      <a href="#projects" class="inline-block mt-6 text-[#64ffda] border border-[#64ffda] px-6 py-3 rounded hover:bg-[#64ffda] hover:text-[#0a192f] transition">Check out my work</a>
-    </section>
+<body class="bg-white text-gray-900 transition-colors duration-300">
+
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle" class="fixed top-5 right-5 bg-gray-200 dark:bg-gray-700 p-2 rounded shadow z-50" aria-label="Toggle dark mode">
+    ☀️
+  </button>
+
+  <!-- Sticky Navbar -->
+  <nav class="fixed top-0 left-0 w-full shadow z-40">
+    <div class="max-w-5xl mx-auto px-6 py-3 flex justify-between items-center">
+      <span class="font-bold text-white text-lg">Amanuel Kiros</span>
+      <div class="space-x-4 text-sm">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto pt-24 px-6 space-y-12 font-sans">
+
+    <!-- Header -->
+    <header>
+      <h1 class="text-4xl font-bold mb-2">Amanuel Kiros</h1>
+      <p class="text-lg font-medium mb-6">Senior Full Stack Software Engineer</p>
+      <div class="flex flex-wrap gap-6 mb-8 text-blue-700 font-medium">
+        <a href="https://github.com/amanuel-github" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/akg-gka-4a117b18b" target="_blank">LinkedIn</a>
+        <a href="https://stackoverflow.com/users/31207110/amanuel-kiros" target="_blank">StackOverflow</a>
+        <a href="mailto:amanuel.kiros18@gmail.com">amanuel.kiros18@gmail.com</a>
+        <span>📞 +251 937 202 092</span>
+      </div>
+    </header>
 
     <!-- About -->
-    <section id="about">
-      <h2 class="text-2xl font-semibold text-gray-100 mb-4 border-b border-gray-700 pb-2">About Me</h2>
+    <section id="about" class="rounded-lg p-6" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-3">About Me</h2>
       <p>
-        I'm a passionate software engineer with strong experience in backend (Java, C#) and frontend (React, Vue). I enjoy crafting clean architectures and mentoring developers.
+        Senior Software Engineer with 6+ years of experience developing high-quality, scalable applications for government, health, and fintech sectors in Ethiopia. Passionate about clean architecture, microservices, and mentoring junior engineers.
       </p>
     </section>
 
     <!-- Skills -->
-    <section id="skills">
-      <h2 class="text-2xl font-semibold text-gray-100 mb-4 border-b border-gray-700 pb-2">Skills</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-        <span>Java</span>
-        <span>Spring Boot</span>
-        <span>C#</span>
-        <span>React</span>
-        <span>VueJS</span>
-        <span>NodeJS</span>
-        <span>Docker</span>
-        <span>AWS</span>
-        <span>SQL</span>
-      </div>
+    <section id="skills" class="rounded-lg p-6" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-3">Technical Skills</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li><strong>Languages:</strong> Java, C#, C++, PHP, JavaScript</li>
+        <li><strong>Frameworks:</strong> Spring Boot, ASP.NET Core, NodeJS, React, Vue, Angular, Xamarin, Laravel, Django</li>
+        <li><strong>Databases:</strong> MySQL, PostgreSQL, SQL Server, MongoDB, SQLite</li>
+        <li><strong>Tools:</strong> Docker, Git, AWS, Azure DevOps, GitLab, Jira</li>
+        <li><strong>UI:</strong> Tailwind, Vuetify, Bootstrap, Material UI</li>
+        <li><strong>Practices:</strong> CI/CD, Clean Code, JWT, Agile, Cybersecurity</li>
+      </ul>
     </section>
 
     <!-- Experience -->
-    <section id="experience">
-      <h2 class="text-2xl font-semibold text-gray-100 mb-4 border-b border-gray-700 pb-2">Experience</h2>
-      <div class="space-y-6">
-        <div>
-          <h3 class="text-lg font-bold text-[#64ffda]">Medco Technology Solutions</h3>
-          <p class="italic text-sm">Senior Full Stack Engineer (2023 - 2025)</p>
-          <ul class="list-disc list-inside mt-2 text-sm">
-            <li>Developed Health Insurance App with Microservice architecture.</li>
-            <li>Implemented JWT security and scalable CI/CD pipelines.</li>
-          </ul>
-        </div>
-        <!-- Add more as needed -->
-      </div>
+    <section id="experience" class="rounded-lg p-6" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-3">Experience</h2>
+
+      <article class="mb-4">
+        <h3 class="font-bold">Senior Full Stack Engineer – Medco Technology Solutions</h3>
+        <p class="italic">Oct 2023 – Jun 2025</p>
+        <ul class="list-disc list-inside">
+          <li>Built Health Insurance App with Spring Boot & VueJS using Microservices</li>
+          <li>Implemented automated tests, Vuetify components, and local deployment</li>
+        </ul>
+      </article>
+
+      <article class="mb-4">
+        <h3 class="font-bold">Senior Full Stack Engineer – Custor Computing PLC</h3>
+        <p class="italic">Nov 2022 – Sept 2023</p>
+        <ul class="list-disc list-inside">
+          <li>Built Trade Licensing System using NodeJS + ReactJS + Clean Architecture</li>
+          <li>Used Azure DevOps, IdentityServer, and multilingual support</li>
+        </ul>
+      </article>
+
+      <article class="mb-4">
+        <h3 class="font-bold">Backend Engineer – Tahses ICT and Computing PLC</h3>
+        <p class="italic">Oct 2021 – Sept 2022</p>
+        <ul class="list-disc list-inside">
+          <li>Developed Learning Management System using Laravel + VueJS</li>
+        </ul>
+      </article>
     </section>
 
     <!-- Projects -->
-    <section id="projects">
-      <h2 class="text-2xl font-semibold text-gray-100 mb-4 border-b border-gray-700 pb-2">Projects</h2>
-      <div class="space-y-4">
-        <div>
-          <h3 class="font-bold text-[#64ffda]">Employee Management System</h3>
-          <p class="text-sm">A .NET Core API with PostgreSQL and full CRUD capabilities.</p>
-          <a href="https://github.com/amanuel-github/employee-management-system" target="_blank" class="text-sm text-[#64ffda] hover:underline">View Code</a>
-        </div>
-        <!-- Add more projects here -->
-      </div>
+    <section id="projects" class="rounded-lg p-6" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-3">Projects</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li><a href="https://github.com/amanuel-github/employee-management-system" target="_blank">Employee Management System – ASP.NET Core</a></li>
+        <li><a href="https://github.com/amanuel-github" target="_blank">Explore All Repositories on GitHub</a></li>
+      </ul>
     </section>
 
     <!-- Contact -->
-    <section id="contact">
-      <h2 class="text-2xl font-semibold text-gray-100 mb-4 border-b border-gray-700 pb-2">Contact</h2>
-      <p>Email: <a href="mailto:amanuel.kiros18@gmail.com" class="text-[#64ffda] hover:underline">amanuel.kiros18@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/amanuel-github" class="text-[#64ffda] hover:underline">@amanuel-github</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/akg-gka-4a117b18b" class="text-[#64ffda] hover:underline">/in/akg-gka-4a117b18b</a></p>
+    <section id="contact" class="rounded-lg p-6" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-3">Contact</h2>
+      <p>Email: <a href="mailto:amanuel.kiros18@gmail.com">amanuel.kiros18@gmail.com</a></p>
+      <p>Phone: +251 937 202 092</p>
+      <p>GitHub: <a href="https://github.com/amanuel-github" target="_blank">github.com/amanuel-github</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/akg-gka-4a117b18b" target="_blank">linkedin.com/in/akg-gka-4a117b18b</a></p>
+      <p>Resume: <a href="SeniorDeveloper.pdf" target="_blank" class="text-blue-600 underline">📄 Download PDF</a></p>
     </section>
+
   </main>
 
-  <footer class="text-center py-6 text-sm text-gray-500 mt-24">
-    <p>Designed & Built by Amanuel Kiros &copy; 2025</p>
-  </footer>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const btn = document.getElementById("darkModeToggle");
+    document.body.classList.add("dark-mode");
+    btn.textContent = "☀️";
+    btn.addEventListener("click", () => {
+      const isDark = document.body.classList.toggle("dark-mode");
+      btn.textContent = isDark ? "☀️" : "🌙";
+    });
+  </script>
 </body>
 </html>
